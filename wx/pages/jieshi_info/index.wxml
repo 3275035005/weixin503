@@ -1,0 +1,35 @@
+<!-- banner -->
+<view class="detailed_banner">
+    <swiper class="detailed_banner__swiper" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#ffffff">
+        <swiper-item class="detailed_banner__item">
+            <image src="{{item.avatar}}" class="detailed_banner__image" />
+        </swiper-item>
+    </swiper>
+</view>
+<!-- banner -->
+
+
+<!-- box -->
+<view class="detailed_box">
+
+    <!-- info -->
+    <view class="detailed_info shadow">
+
+        <view class="detailed_integral flex">
+            <view class="detailed_integral__number">{{item.name}}</view>
+            <view class="detailed_integral__text" wx:if="{{item.sex === '0'}}">女</view>
+            <view class="detailed_integral__text" wx:else="">男</view>
+        </view>
+    </view>
+    <!-- info -->
+
+
+</view>
+
+
+
+<!-- btn -->
+<view class="detailed_btn flex">
+    <view class="page_button1 center flex" bindtap="onlineBtnOk" wx:if="{{!item.flag}}">结实同学</view>
+    <view class="page_button1 center flex" bindtap="onlineBtnError" wx:else>取消结实</view>
+</view>

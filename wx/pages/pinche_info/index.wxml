@@ -1,0 +1,61 @@
+<!-- banner -->
+<view class="goods_banner" style=" text-align: center;">
+  <image style="width: 600rpx; width: 600rpx;" src="/images/pinche.png" class="banner_image" />
+</view>
+<!-- banner -->
+
+<!-- info -->
+<view class="goods_info">
+
+    <!-- title -->
+    <view class="goods_info__title">{{goods.startAddress}}-{{goods.endAddress}}</view>
+    <!-- title -->
+
+    <!-- other -->
+    <view class="goods_info__other flex">
+    
+        <!-- price -->
+        <view class="group-price flex">
+            <view class="group-price-tag">拼车价</view>
+            <view class="group-price-now"><text class="page-unit">￥</text>{{goods.money}}</view>
+        </view>
+
+    </view>
+    <!-- other -->
+
+
+    <view class="goods_info__bottom flex"  wx:if="{{goods.seat != 0}}">
+        
+        <!-- people -->
+        <view class="goods_info__people" wx:if="{{goods.seat != 0}}">还差 {{goods.seat}} 人</view>
+        
+    </view>
+    <!-- bottom -->
+    
+</view>
+<!-- info -->
+
+<!-- group -->
+<view class="goods_group">
+    
+    <view class="goods_column">参与拼车人</view>
+    <!-- title -->
+
+    <!-- content -->
+    <view class="goods_group__content flex">
+        <view class="goods_group__item" wx:for="{{goods_group}}" wx:key="index">
+            <image src="{{item.avatar}}" class="goods_group__icon" />
+            <view class="goods_group__text">{{item.name}}</view>
+        </view>
+    </view>
+</view>
+<!-- footer -->
+<view class="goods_footer flex">
+    <view class="goods_footer__item join" wx:if="{{goods.status == '1'}}">
+        <button class="goods_footer__button" bindtap="groupBooking">参与拼车</button>
+    </view>
+    <view class="goods_footer__item join1" wx:else>
+        <button class="goods_footer__button">拼车结束</button>
+    </view>
+</view>
+<!-- footer -->

@@ -1,0 +1,46 @@
+<!-- form -->
+<view class="page_form" style="margin-top: 16rpx; margin-bottom: 32rpx;">
+
+    <!-- item -->
+    <view class="page_form__item flex">
+        <view class="page_form__title">起点站</view>
+        <view class="page_form__content">
+            <input type="text" placeholder="请输入起点站" class="page_form__input"  model:value="{{startAddress}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+
+    <!-- item -->
+    <view class="page_form__item flex">
+        <view class="page_form__title">终点站</view>
+        <view class="page_form__content">
+            <input type="text" placeholder="请输入终点站" class="page_form__input"  model:value="{{endAddress}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+
+     <!-- item -->
+     <view class="page_form__item flex">
+        <view class="page_form__title">座位数</view>
+        <view class="page_form__content">
+            <input type="number" placeholder="请输入座位数" class="page_form__input"  model:value="{{seat}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+      <!-- item -->
+      <view class="page_form__item flex">
+        <view class="page_form__title">单价</view>
+        <view class="page_form__content">
+            <input type="number" placeholder="请输入单价" class="page_form__input"  model:value="{{money}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+
+</view>
+<!-- form -->
+
+<!-- button -->
+<view class="account_button">
+    <button class="page_button"  bindtap="updateBtn" style="width: 686rpx;">发起拼车</button>
+</view>
+<!-- button -->

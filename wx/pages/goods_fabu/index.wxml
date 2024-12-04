@@ -1,0 +1,38 @@
+<view>
+  <view>
+    <!-- 大内容 -->
+    <view class="content">
+      <view class="input">
+        <input type="text" placeholder="请输入物品名称" bindinput="name" value="{{name}}" />
+      </view>     
+     
+
+      <!-- 详细地址 -->
+      <view class="input">
+          <input type="text" placeholder="输入物品价格" bindinput="price" value="{{price}}" />
+        </view>
+        <view class="font">物品介绍</view>
+        <view class="text">
+        <view class="textFont">介绍 丨</view>
+        <input type="text" placeholder="可选填物品介绍" bindinput="content" value="{{content}}" />
+      </view>
+    </view>
+    <!-- 选择图片 -->
+    <view class="addImg">
+      <!-- 有照片 -->
+      <view wx:if="{{image!=''}}" style="width: 90%;">
+        <image src="{{image}}" bindtap="uploadimg" mode="widthFix"></image>
+      </view>
+      <!-- 没照片 -->
+      <view class="add" wx:if="{{image==''}}" bindtap="uploadimg">
+        +
+      </view>
+      <view class="font">上传图片后需要更改，请点击图片</view>
+      <view class="font"><text style="color: red;">*</text>除备注外其他为必填项</view>
+    </view>
+    <!-- 提交按钮 -->
+    <view class="submitButton" bindtap="click1">发布</view>
+
+  </view>
+</view>
+

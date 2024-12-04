@@ -1,0 +1,17 @@
+<view class="apply-item apply-desc">
+  <text>笔记标题</text>
+  <input  class="in-4" placeholder="请输入笔记标题" bindinput="setTitle" value="{{title}}" 
+				type="text" placeholder-style="color:#ccc;font-size:14px;"></input>
+	<!-- <input class="in-5" placeholder="请输入笔记内容：：" placeholder-style="color:#ccc;font-size:14px;" type="string"
+		maxlength="100" bindinput="setContent"></input> -->
+</view>
+<view class="apply-item apply-desc">
+	<text>笔记内容：</text>
+	<textarea class="in-5" placeholder="请输入笔记内容：：" placeholder-style="color:#ccc;font-size:14px;" type="string"
+		maxlength="100" bindinput="setContent"></textarea>
+</view>
+    <!-- button -->
+    <view class="account_button">
+        <button class="page_button" bindtap="inApplyData" style="width: 686rpx;">提交笔记</button>
+    </view>
+    <!-- button -->

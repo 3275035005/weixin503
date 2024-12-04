@@ -1,0 +1,51 @@
+<!-- banner -->
+<view class="detailed_banner">
+  <swiper class="detailed_banner__swiper" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#ffffff">
+    <swiper-item class="detailed_banner__item">
+      <image src="{{item.image}}" class="detailed_banner__image" />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- banner -->
+
+
+<!-- box -->
+<view class="detailed_box">
+
+  <!-- info -->
+  <view class="detailed_info shadow">
+
+    <!-- integral -->
+    <view class="detailed_integral flex">
+      <view class="detailed_integral__number">{{item.price}}<text class="detailed_integral__text">元起</text></view>
+    </view>
+    <!-- integral -->
+
+    <!-- title -->
+    <view class="detailed_title">{{item.name}}</view>
+    <!-- title -->
+    <!-- other -->
+    <view class="detailed_other flex">
+      <!-- column -->
+      <view class="detailed_column">
+        <text class="line">——</text>
+        <text>商品介绍</text>
+        <text class="line">——</text>
+        <view>{{item.content}}</view>
+      </view>
+      <br/>
+     
+    </view>
+    <!-- other -->
+
+  </view>
+  <!-- info -->
+
+
+</view>
+
+
+<!-- btn -->
+<view class="detailed_btn flex">
+  <view class="page_button1 center flex" bindtap="onlineBtnOk">立即购买</view>
+</view>

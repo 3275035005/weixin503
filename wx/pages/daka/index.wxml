@@ -1,0 +1,39 @@
+<view class="padding-sm radius shadow-warp bg-white">
+  <view class='wrap'>
+      <view>
+          <view class='date-show'>
+              <view class='lt-arrow' bindtap='lastMonth'>
+                  <text class="cuIcon-back text-green"></text>
+              </view>
+              {{year}}年{{month}}月
+              <view class='rt-arrow' bindtap='nextMonth'>
+                  <text class="cuIcon-right text-green"></text>
+             </view>
+         </view>
+         
+     </view>
+     <view class='header'>
+         <view wx:for='{{date}}' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}<view></view></view>
+     </view>
+     <view class='date-box'>
+            <view wx:for='{{dateArr}}' class='{{1 == item.isSign ? "nowDay" : ""}}'>
+
+                <view class='date-head'>
+                    <view >{{item.dateNum}}</view>
+                </view>
+            </view>
+
+     </view>
+ </view>
+ </view>
+<view class="padding text-center">
+  <view class="padding-lr bg-white">
+    <view class="solid-bottom padding">
+      <text class="text-grey">您一共打卡 <text> {{sumDays}} </text>天!</text>
+    </view>
+  </view>
+</view>
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-gradual-purple margin-tb-sm lg" bindtap="dakaBtn">打卡</button>
+</view>
+<button bindtap="isSignFunc">查看笔记提交记录</button>

@@ -1,0 +1,64 @@
+<view>
+  <view class="about" bindtap="showPop" style="display:{{about}};">
+    <view class="content">
+      <view class="img">
+        <image src="../../images/shiwu/xingqiu.png"></image>
+      </view>
+      <view class="font1">寻 物 启 事</view>
+      <view class="headImg">
+        <image src="{{seek.avatar}}"></image>
+      </view>
+      <view class="font1">{{seek.userName}}</view>
+      <view class="font1">手机号: {{seek.phone}}</view>
+      <view class="font2">请通话后介绍物品的详细信息,慎防诈骗</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">
+      <view class="font">
+        标题丨{{seek.title}}
+      </view>
+    </view>
+    <view class="img">
+      <image src="{{seek.image}}" wx:if="{{seek.image!=''}}" mode="widthFix"></image>
+      <image src="../../images/shiwu/noImg.png" wx:if="{{seek.image==''}}" style="width: 350rpx;height: 350rpx;"></image>
+    </view>
+
+    <view class="text">
+      备注丨{{seek.remark == null ?"未填写":seek.remark}}
+    </view>
+  </view>
+
+  <view class="user">
+    <view class="headImg">
+      <image src="{{seek.avatar}}"></image>
+    </view>
+    <view class="userName">{{seek.userName}}</view>
+    <view class="button" wx:if="{{seek.status=='0'}}" bindtap="showPop">联系方式</view>
+    <view wx:else class="ok">
+      <image src="../../images/shiwu/ok.png"></image>
+    </view>
+  </view>
+  <view  style="display:flex;flex-direction: row;">
+    <view class="detail">
+    <view class="title">物品详情丨</view>
+    <view class="font1">物品类型：{{classifiedList[seek.classified]}}</view>
+      <view class="font1">认领状态：{{statusList[seek.status]}}</view>
+    <view class="image">
+      <image src="../../images/shiwu/xingqiu.png"></image>
+    </view>
+  </view>
+  
+  
+  <button class="detail" open-type="share">
+      <view class="title1">发送给朋友</view>
+      <image style="width:100rpx;height:100rpx" src="../../images/shiwu/release.png"></image>
+    </button>
+
+
+
+
+  </view>
+  
+</view>

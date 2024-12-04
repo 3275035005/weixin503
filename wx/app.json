@@ -1,0 +1,71 @@
+{
+  "pages":[
+    "pages/login/index",
+    "pages/index/index",
+    "pages/register/index",
+    "pages/wode/wode",
+    "pages/notice/index",
+    "pages/notice_info/index",
+    "pages/info/index",
+  
+    "pages/wode_order/index",
+    "pages/wode_bangling/index",
+
+    "pages/updatePassword/index",
+    "pages/jieshi/index",
+    "pages/jieshi_info/index",
+    "pages/biji/index",
+    "pages/daka/index",
+    "pages/journalism_classified_list/index",
+    "pages/journalism_detail/index",
+    "pages/journalism_list/index",
+    "pages/biji_list/index",
+    "pages/pinche/index",
+    "pages/pinche_info/index",
+    "pages/shiwuzhaoling/index",
+    "pages/shiwuzhaoling_fabu/index",
+    "pages/xunwu/index",
+    "pages/zhaoling/index",
+    "pages/pinche_send/index",
+    "pages/goods/index",
+    "pages/goods_fabu/index",
+    "pages/goods_order/index",
+    "pages/goodsInfo/index",
+    "pages/kuaidi/index",
+    "pages/kuaidi_send/index",
+    "pages/huzhu/index",
+    "pages/huzhu_info/index",
+    "pages/huzhu_send/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#5360FE",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      }, 
+      {
+        "pagePath": "pages/shiwuzhaoling/index",
+        "text": "失物寻物"
+      }, 
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+  
+  
+}

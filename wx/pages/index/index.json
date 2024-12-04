@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "tabbar":"/component/tabbar/tabbar"
+  },
+ 
+  "navigationBarTitleText": "首页"
+}

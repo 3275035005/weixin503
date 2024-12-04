@@ -1,0 +1,49 @@
+<!-- banner -->
+<view class="goods_banner" style=" text-align: center;">
+  <image style="width: 600rpx; width: 600rpx;" src="/images/huzhu.png" class="banner_image" />
+</view>
+<!-- banner -->
+
+<!-- info -->
+<view class="goods_info">
+
+    <!-- title -->
+    <view class="goods_info__title">{{goods.title}}</view>
+    <!-- title -->
+
+
+    <view class="goods_info__bottom flex"  wx:if="{{goods.seat != 0}}">
+        
+        <!-- people -->
+        <view class="goods_info__people" wx:if="{{goods.seat != 0}}">还差 {{goods.seat}} 人</view>
+        
+    </view>
+    <!-- bottom -->
+    
+</view>
+<!-- info -->
+
+<!-- group -->
+<view class="goods_group">
+    
+    <view class="goods_column">参与互助人</view>
+    <!-- title -->
+
+    <!-- content -->
+    <view class="goods_group__content flex">
+        <view class="goods_group__item" wx:for="{{goods_group}}" wx:key="index">
+            <image src="{{item.avatar}}" class="goods_group__icon" />
+            <view class="goods_group__text">{{item.name}}</view>
+        </view>
+    </view>
+</view>
+<!-- footer -->
+<view class="goods_footer flex">
+    <view class="goods_footer__item join" wx:if="{{goods.status == '1'}}">
+        <button class="goods_footer__button" bindtap="groupBooking">参与互助</button>
+    </view>
+    <view class="goods_footer__item join1" wx:else>
+        <button class="goods_footer__button">互助结束</button>
+    </view>
+</view>
+<!-- footer -->

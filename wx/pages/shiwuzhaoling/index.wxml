@@ -1,0 +1,81 @@
+<view >
+  <!-- 向上的图标-->
+  <view class="side">
+    <navigator url="/pages/shiwuzhaoling_fabu/index">
+      <view class="add">+</view>
+    </navigator>
+  </view>
+
+<!-- 失物招领与寻物启事 -->
+  <view class="title">
+    <view bindtap="indexTitle1" class="lose">
+      失物招领
+      <view class="{{indexTitle==0?'line':''}}"></view>
+    </view>
+    <view bindtap="indexTitle2" class="seek">
+      寻物启事
+      <view class="{{indexTitle==1?'line':''}}"></view>
+    </view>
+  </view>
+<!-- 循环清单 -->
+  <view class="list">
+    <view bindtap="thing" class="{{thing[index].str1==nowThing?'item1':'item'}}" data-index="{{index}}" wx:for="{{thing}}">
+      {{thing[index].str}}</view>
+  </view>
+<!-- 内容 -->
+  <view wx:if="{{indexTitle==0}}">
+    <view class="loseContent">
+      <view bindtap="loseContent" class="content"    data-id="{{lose[index].id}}"   data-index="{{index}}" wx:for="{{lose}}">
+        <view class="img">
+          <image wx:if="{{lose[index].image!=''}}"  src="{{lose[index].image}}"></image>
+          <image src="../../images/shiwu/noImg.png" wx:if="{{lose[index].image==''}}"></image>
+        </view>
+        <view class="list">
+          <view class="title">
+            {{lose[index].title}}
+          </view>
+        </view>
+        <view class="nowThing">类型：{{classifiedList[lose[index].classified]}}</view>
+        <view class="user" style="display: flex;">
+          <view class="imageUser">
+            <image src="{{lose[index].avatar}}"></image>
+          </view>
+          <view class="userName">{{lose[index].userName}}</view>
+          <view class="icon">
+            <image src="../../images/shiwu/xingqiu.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{indexTitle==1}}">
+    <view class="loseContent">
+      <view bindtap="loseContent" class="content"    data-id="{{seek[index].id}}"   data-index="{{index}}" wx:for="{{seek}}">
+        <view class="img">
+          <image wx:if="{{seek[index].image!=''}}"  src="{{seek[index].image}}"></image>
+          <image src="../../images/shiwu/noImg.png" wx:if="{{seek[index].image==''}}"></image>
+        </view>
+        <view class="list">
+          <view class="title">
+            {{seek[index].title}}
+          </view>
+        </view>
+        <view class="nowThing">类型：{{classifiedList[seek[index].classified]}}</view>
+        <view class="user" style="display: flex;">
+          <view class="imageUser">
+            <image src="{{seek[index].avatar}}"></image>
+          </view>
+          <view class="userName">{{seek[index].userName}}</view>
+          <view class="icon">
+            <image src="../../images/shiwu/xingqiu.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+</view>
+
+
+<!-- tabbar -->
+<tabbar tabbar_current="1"></tabbar>
+<!-- tabbar -->

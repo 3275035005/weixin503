@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tabbar":"/component/tabbar/tabbar"
+},
+  "navigationBarTitleText": "失物招领",
+  "backgroundColorTop": "left",
+  "enablePullDownRefresh": true
+}

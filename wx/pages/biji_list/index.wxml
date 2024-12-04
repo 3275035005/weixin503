@@ -1,0 +1,22 @@
+<!-- list -->
+<view class="allowance_list">
+
+    <!-- item -->
+    <view class="allowance_item shadow flex" wx:for="{{list}}" wx:key="index" wx:if="{{list !== ''}}"> 
+        <view class="allowance_item__content"> 
+            <view class="allowance_item__title">{{item.content}}</view>
+            <view class="allowance_item__date">{{item.date}}</view>
+        </view>
+        <view class="allowance_item__money">{{item.title}}</view>
+    </view>
+    <!-- itemm -->
+    
+    <!-- nothing -->
+    <view class="page_nothing flex" wx:if="{{list == ''}}">
+        <image class="page_nothing__icon" src="/images/page_nothing.svg" />
+        <view class="page_nothing__text">没有内容</view>
+    </view>
+    <!-- nothing -->
+
+</view>
+<!-- list -->

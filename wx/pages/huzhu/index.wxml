@@ -1,0 +1,103 @@
+<!-- 向上的图标-->
+<view class="side" bindtap="DevTuchCall">
+  <view class="add">+</view>
+</view>
+
+<!-- tab -->
+<view class="page-tab flex two">
+  <view class="item {{current == index?'active':''}}" wx:for="{{tabs}}" bindtap="tabChange" wx:key="index" data-index="{{index}}">{{item}}</view>
+</view>
+<!-- tab -->
+
+<!-- list -->
+<view class="collage-list">
+
+  <!-- swiper -->
+  <swiper class="collage-swiper" current="{{current}}" bindchange="swiperChange">
+
+    <!-- 全部拼车 -->
+    <swiper-item class="collage-swiper-item">
+
+      <!-- item -->
+      <view class="collage-item" wx:for="{{collage_list}}" wx:key="index">
+        <navigator hover-class="none" bindtap="clickGoodsInfo" data-pid="{{item.id}}">
+
+          <!-- top -->
+          <view class="collage-item-top flex">
+
+            <view class="collage-item-content">
+              <view class="collage-item-title">{{item.title}}</view>
+            </view>
+          </view>
+          <!-- top -->
+
+          <!-- bottom -->
+          <view class="collage-item-bottom flex">
+            <view class="collage-item-text">发布时间：</view>
+            <view class="collage-item-time">{{item.createTime}}</view>
+            <button class="collage-item-btn blue" wx:if="{{item.status == '1'}}">互助中</button>
+            <button class="collage-item-btn blue" wx:else>互助完成</button>
+          </view>
+          <!-- bottom -->
+
+        </navigator>
+      </view>
+      <!-- item -->
+      <!-- 无数据 -->
+      <block wx:if="{{collage_list == '' }}">
+        <view class="page_nodata">
+          <image src="/images/icon-none.svg" class="icon" />
+          <view class="text">暂时没有数据</view>
+        </view>
+      </block>
+    </swiper-item>
+    <!-- 全部拼车 -->
+
+    <!-- 我的拼车 -->
+    <swiper-item class="collage-swiper-item">
+
+      <!-- item -->
+      <view class="collage-item" wx:for="{{collage_list}}" wx:key="index">
+        <navigator hover-class="none" bindtap="clickGoodsInfo" data-pid="{{item.id}}">
+
+          <!-- top -->
+          <view class="collage-item-top flex">
+
+            <view class="collage-item-content">
+              <view class="collage-item-title">{{item.title}}</view>
+            </view>
+          </view>
+          <!-- top -->
+
+          <!-- bottom -->
+          <view class="collage-item-bottom flex">
+            <view class="collage-item-text">发布时间：</view>
+            <view class="collage-item-time">{{item.createTime}}</view>
+            <button class="collage-item-btn blue" wx:if="{{item.status == '1'}}">互助中</button>
+            <button class="collage-item-btn blue" wx:else>互助完成</button>
+          </view>
+          <!-- bottom -->
+
+        </navigator>
+      </view>
+      <!-- item -->
+      <!-- 无数据 -->
+      <block wx:if="{{collage_list == '' }}">
+        <view class="page_nodata">
+          <image src="/images/icon-none.svg" class="icon" />
+          <view class="text">暂时没有数据</view>
+        </view>
+      </block>
+    </swiper-item>
+    <!-- 我的拼车 -->
+
+
+    <!-- 我的拼团 -->
+
+  </swiper>
+  <!-- swiper -->
+
+
+
+</view>
+<!-- list -->

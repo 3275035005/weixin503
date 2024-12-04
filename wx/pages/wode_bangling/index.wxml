@@ -1,0 +1,40 @@
+
+
+
+<!-- list -->
+<view class="cash_list">
+
+     <!-- item -->
+     <view class="cash_item shadow" wx:for="{{item}}" wx:key="index" wx:if="{{item !== ''}}">
+                <view class="cash_top flex">
+                    <view class="cash_top__id">手机号：{{item.phone}}</view>
+                    <view class="cash_top__date">{{item.createTime}}</view>
+                </view>
+                <view class="cash_box flex">
+                    <view class="cash_box__item">
+                        <view class="cash_box__text">领取地点</view>
+                        <view class="cash_box__num red">{{item.startAddress}}</view>
+                    </view>
+                    <view class="cash_box__item">
+                        <view class="cash_box__text">收货地点</view>
+                        <view class="cash_box__num">{{item.endAddress}}</view>
+                    </view>
+                </view>
+                <view class="cash_bottom flex">
+                    <view class="cash_bottom__tips"></view>
+                    <view class="cash_bottom__state yes" wx:if="{{item.type == 0}}">小件</view>
+                    <view class="cash_bottom__state no" wx:if="{{item.type == 1}}">中件</view>
+                    <view class="cash_bottom__state ing" wx:if="{{item.type == 2}}">大件</view>
+                </view>
+            </view>
+            <!-- item -->
+
+            <!-- nothing -->
+            <view class="page_nothing flex" wx:if="{{item == ''}}">
+                <image class="page_nothing__icon" src="/images/page_nothing.svg" />
+                <view class="page_nothing__text">没有内容</view>
+            </view>
+            <!-- nothing -->
+
+</view>
+<!-- list -->

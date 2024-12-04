@@ -1,0 +1,46 @@
+<view >
+  <!-- 向上的图标-->
+  <view class="side">
+    <navigator url="/pages/goods_fabu/index">
+      <view class="add">+</view>
+    </navigator>
+  </view>
+
+<!-- 失物招领与寻物启事 -->
+  <view class="title">
+    <view bindtap="indexTitle1" class="lose">
+      二手商品大厅
+      <view class="{{indexTitle==0?'line':''}}"></view>
+    </view>
+    <view bindtap="indexTitle2" class="seek">
+      我的发布
+      <view class="{{indexTitle==1?'line':''}}"></view>
+    </view>
+  </view>
+<!-- 内容 -->
+  <view>
+    <view class="loseContent">
+      <view bindtap="loseContent" class="content"    data-id="{{list[index].id}}"   data-index="{{index}}" wx:for="{{list}}">
+        <view class="img">
+          <image wx:if="{{list[index].image!=''}}"  src="{{list[index].image}}"></image>
+          <image src="../../images/shiwu/noImg.png" wx:if="{{list[index].image==''}}"></image>
+        </view>
+        <view class="list">
+          <view class="title">
+            {{list[index].name}}
+          </view>
+        </view>
+        <view class="nowThing">状态：{{classifiedList[(list[index].status)-1]}}</view>
+        <view class="user" style="display: flex;">
+          <view class="imageUser">
+            <image src="{{list[index].avatar}}"></image>
+          </view>
+          <view class="userName">{{list[index].userName}}</view>
+          <view class="icon">
+            <image src="../../images/shiwu/xingqiu.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!-- form -->
+<view class="page_form" style="margin-top: 16rpx; margin-bottom: 32rpx;">
+
+    <!-- item -->
+    <view class="page_form__item flex">
+        <view class="page_form__title">收货人姓名</view>
+        <view class="page_form__content">
+            <input type="text" placeholder="请输入收货人姓名" class="page_form__input"  model:value="{{name}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+
+    <!-- item -->
+    <view class="page_form__item flex">
+        <view class="page_form__title">收货人电话</view>
+        <view class="page_form__content">
+            <input type="text" placeholder="请输入收货人电话" class="page_form__input"  model:value="{{phone}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+
+<!-- item -->
+<view class="page_form__item flex">
+        <view class="page_form__title">收货地址</view>
+        <view class="page_form__content">
+            <input type="text" placeholder="请输入收货地址" class="page_form__input"  model:value="{{address}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+</view>
+<!-- form -->
+
+<!-- button -->
+<view class="account_button">
+    <button class="page_button"  bindtap="updateBtn" style="width: 686rpx;">购买</button>
+</view>
+<!-- button -->

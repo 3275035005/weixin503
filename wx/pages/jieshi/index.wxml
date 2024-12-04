@@ -1,0 +1,33 @@
+<!-- tab -->
+<view class="page-tab flex two">
+    <view class="item {{current == index?'active':''}}" wx:for="{{tabs}}" bindtap="tabChange" wx:key="index" data-index="{{index}}">{{item}}</view>
+</view>
+<!-- tab -->
+<!-- list -->
+<view class="exchange_list">
+
+<!-- item -->
+<view class="exchange_list__item" wx:for="{{studentList}}" wx:key="index" wx:if="{{studentList !== ''}}">
+    <navigator hover-class="none" url="/pages/jieshi_info/index?id={{item.id}}" class="flex">
+        <image src="{{item.avatar}}" class="exchange_list__image" />
+        <view class="exchange_list__content">
+            <view class="exchange_list__title">{{item.title}}</view>
+            <view class="exchange_list__info">
+                姓名: <text>{{item.name}}</text>
+              
+            </view>
+        </view>
+        <image src="/images/icon_arrow.svg" class="exchange_list__icon" />
+    </navigator>
+</view>
+<!-- item -->
+
+<!-- nothing -->
+<view class="page_nothing flex" wx:if="{{studentList == ''}}">
+    <image class="page_nothing__icon" src="/images/page_nothing.svg" />
+    <view class="page_nothing__text">没有更多同学</view>
+</view>
+<!-- nothing -->
+
+</view>
+<!-- list -->

@@ -1,0 +1,28 @@
+<!-- form -->
+<view class="page_form" style="margin-top: 16rpx; margin-bottom: 32rpx;">
+
+    <!-- item -->
+    <view class="page_form__item flex">
+        <view class="page_form__title">互助标题</view>
+        <view class="page_form__content">
+            <input type="text" placeholder="请输入互助标题" class="page_form__input"  model:value="{{title}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+    <!-- item -->
+
+     <!-- item -->
+     <view class="page_form__item flex">
+        <view class="page_form__title">互助人数</view>
+        <view class="page_form__content">
+            <input type="number" placeholder="请输入互助人数" class="page_form__input"  model:value="{{seat}}" placeholder-class="placeholder" />
+        </view>
+    </view>
+
+</view>
+<!-- form -->
+
+<!-- button -->
+<view class="account_button">
+    <button class="page_button"  bindtap="updateBtn" style="width: 686rpx;">发起互助</button>
+</view>
+<!-- button -->
